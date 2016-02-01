@@ -1,0 +1,11 @@
+{
+    "name": "andreaskasper/askbot_php",
+    "description": "Q/A Board für php",
+    "license": "FastFoodLicense <https://github.com/DJAssi/license/blob/master/README.md>",
+    "authors": [
+        {
+            "name": "Andreas Kasper",
+            "email": "andreas.kasper@goo1.de"
+        }
+    ]
+}
