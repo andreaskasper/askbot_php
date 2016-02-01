@@ -5,7 +5,8 @@ A easy to user Q/A-Board for php
 
 
 ### Installation
-You can easily install it via composer.
+You can easily install it via composer or via github
+git clone --depth 1 https://github.com/andreaskasper/askbot_php.git
 
 ### License
 FreeFoodLicense

@@ -13,9 +13,9 @@
 
 class Skype {
 
-	public static function getStatus($name == "") {
+	public static function getStatus($name = "") {
 		echo("Hallo");
-		if ($name == null OR $name."" == "") return 0;
+		if (($name == null) OR ($name."" == "")) return 0;
 		$web = WebCache::get("http://mystatus.skype.com/".$name.".num", 300);
 		return $web+0;
 	}
