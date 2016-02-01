@@ -1,0 +1,1 @@
+<?phpclass Userlist {	public static function userexists($name) {		$db = new SQL(0);		$row = $db->cmdrow(0, 'SELECT id FROM user_list WHERE username LIKE "{0}" LIMIT 0,1', array($name));		return isset($row["id"]);	}}

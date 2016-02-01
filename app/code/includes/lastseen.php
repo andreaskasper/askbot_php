@@ -1,0 +1,1 @@
+<?php$db = new SQL(0);if (MyUser::isloggedin()) {	$db->cmd(0, 'INSERT LOW_PRIORITY IGNORE INTO user_action SET user={0}, last_action = {0} ON DUPLICATE KEY UPDATE last_action ={1}', true, array(MyUser::id(), time()));}

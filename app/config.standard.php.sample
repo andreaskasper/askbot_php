@@ -1,0 +1,6 @@
+<?php
+
+
+$_ENV["config"]["db"][0]["conn"] = "mysql://root:@localhost/askbot/";
+
+$_ENV["baseurl"] = "http://127.0.0.1:8082/askbot/";

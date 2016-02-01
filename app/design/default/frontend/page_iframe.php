@@ -1,0 +1,1 @@
+<?php//@header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");PageEngine::html("html_head", array("nocache" => true));?><iframe src="<?=html($params["url"]);?>" frameborder="0" style="width:100%; height: 100%;"/></body></html><?phpexit(1);?>

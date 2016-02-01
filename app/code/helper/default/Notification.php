@@ -1,0 +1,1 @@
+<?phpclass Notification {	public static function write($id, $ref = array()) {		switch ($id) {			case 1:				return _h('Gratulation, Du hast das Abzeichen "Populäre Frage" bekommen! Siehe <a href="#">dein Profil</a>.', $ref);			default:				return _h('Unbekannte Benachrichtigungsinformation');		}	}}

@@ -1,0 +1,1 @@
+<?phpecho("fertig...".date("Y-m-d H:i:s")); exit(1);

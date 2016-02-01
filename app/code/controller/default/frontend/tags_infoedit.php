@@ -1,0 +1,1 @@
+<?phpif (isset($_POST["act"]) && $_POST["act"] == "save") {	$db = new SQL(0);	$w = array();	$w["tag"] = $params["id"];	$w["short_desc"] = trim($_POST["short_desc"]);	$w["long_desc"] = trim($_POST["text"]);	$w["icon_URL"] = trim($_POST["icon_URL"]);	$db->CreateUpdate(0, 'tag_details', $w);	PageEngine::AddSuccessMessage("save", "Artikel gespeichert");}

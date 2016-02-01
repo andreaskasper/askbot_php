@@ -1,0 +1,1 @@
+<?phpPageEngine::html("html_head", array("title" => "Über ".SiteConfig::val("page/title")));PageEngine::html("header");?>	<div id="Content" class="content-wrapper">		<article class="ContentLeft">			<h1>Willkommen bei <?=html(SiteConfig::val("page/title"));?></h1>		</article>				</div>				<?phpPageEngine::html("footer");?>	</body></html><?phpexit(1);?>

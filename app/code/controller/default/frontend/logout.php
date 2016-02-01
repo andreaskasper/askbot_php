@@ -1,0 +1,1 @@
+﻿<?phpunset($_SESSION["myuser"]);

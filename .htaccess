@@ -1,0 +1,16 @@
+
+#AuthName "test"
+#AuthType Basic
+#AuthUserFile "c:\xampp\htdocs\.htusers"
+#require valid-user
+
+
+RewriteEngine On
+# Für schnelleren Zugriff einfach die RewriteBase nutzen und das entsprechende Verzeichnis eintragen
+#RewriteBase /askbot/
+#RewriteCond %{REQUEST_URI} !^/skins/
+#RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule (.+) index.php [L]

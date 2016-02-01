@@ -1,0 +1,1 @@
+<?phpclass Postbox {	public static function CountNew() {		$db = new SQL(0);		$v = $db->cmdvalue(0, 'SELECT count(*) as Anzahl FROM mails WHERE to_user={0} AND is_read="0" LIMIT 0,1', array(MyUser::id()));		return $v+0;	}}

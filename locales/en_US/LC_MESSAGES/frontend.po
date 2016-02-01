@@ -1,0 +1,25 @@
+# English Translation of Askbot for php
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Askbot 0.1.20121108-beta\n"
+"Report-Msgid-Bugs-To: askbot@sourceforge\n"
+"PO-Revision-Date: 2012-11-08 14:00:00+01:00\n"
+"Last-Translator: Andreas Kasper <djassi@web.de>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: header.php
+msgid "Abzeichen"
+msgstr "Badges"
+
+#: header.php
+msgid "Benutzer"
+msgstr "Users"
+
+#: header.php
+msgid "Einstellungen"
+msgstr "Settings"

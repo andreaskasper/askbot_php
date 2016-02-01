@@ -1,0 +1,1 @@
+<?phpclass API_notification {	public static function allread($data) {		if (!MyUser::isloggedin()) throw new APIException("Nicht angemeldet...",100);		$db = new SQL(0);		$db->cmd(0, 'DELETE * FROM user_notification WHERE user = {0}', true, array(MyUser::id()));		return true;	}}

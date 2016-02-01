@@ -1,0 +1,585 @@
+# English Translation of Askbot for php
+msgid ""
+msgstr ""
+"Project-Id-Version: Askbot 0.1.20121108-beta\n"
+"Report-Msgid-Bugs-To: askbot.sourceforge.net\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-11-18 20:25+0100\n"
+"Last-Translator: Andreas Kasper <investmentinformatiker@googlemail.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=n == 0? 0:n>1?2:1;\n"
+"X-Poedit-Basepath: C:\\Users\\Andreas\\workspace\\askbot\\app\\design"
+"\\default\\frontend\\\n"
+
+#: box_paginator.php
+msgid "Previous Page"
+msgstr "Vorherige Seite"
+
+#: box_paginator.php
+msgid "« Previous"
+msgstr "« zurück"
+
+#: box_paginator.php
+msgid "go to {n}th page"
+msgid_plural "go to {n}th page"
+msgstr[0] "---"
+msgstr[1] "gehe zur ersten Seite"
+msgstr[2] "gehe zur {n}. Seite"
+
+#: box_paginator.php
+msgid "Next Page"
+msgstr "Nächste Seite"
+
+#: box_paginator.php
+msgid "Next »"
+msgstr "weiter »"
+
+#: footer.php
+msgid "Copyright {pagename}, {year}."
+msgstr "Copyright {pagename}, {year}."
+
+#: footer.php
+msgid "About us"
+msgstr "Über uns"
+
+#: footer.php
+msgid "Frequently asked questions"
+msgstr "Häufige Fragen"
+
+#: footer.php
+msgid "Help"
+msgstr "Hilfe"
+
+#: footer.php
+msgid "Privacy"
+msgstr "Datenschutzrichtlinien"
+
+#: footer.php
+msgid "Feedback"
+msgstr "Feedback geben"
+
+#: footer.php
+msgid "Powered by Askbot for php version {0}"
+msgstr "Powered by Askbot for php version {0}"
+
+#: footer.php
+msgid "inspired by Askbot"
+msgstr "inspiriert von Askbot"
+
+#: header.php
+msgid "close"
+msgstr "schliessen"
+
+#: header.php
+msgid "back to home"
+msgstr "zurück zur Startseite"
+
+#: header.php
+msgid "You have {n} new messages"
+msgid_plural "You have {n} new messages"
+msgstr[0] "Du hast keine neuen Nachrichten"
+msgstr[1] "Du hast eine neue Nachricht"
+msgstr[2] "Du hast {n} neue Nachrichten"
+
+#: header.php
+msgid "Karma: {0}"
+msgstr "Karma: {0}"
+
+#: header.php
+msgid "Badges"
+msgstr "Abzeichen"
+
+#: header.php
+msgid "logout"
+msgstr "Abmelden"
+
+#: header.php
+msgid "Hello, please register"
+msgstr "Hallo, bitte registriere Dich"
+
+#: header.php
+msgid "help"
+msgstr "Hilfe"
+
+#: header.php
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: header.php widget_tags.php
+msgid "Tags"
+msgstr "Tags"
+
+#: header.php
+msgid "Users"
+msgstr "Benutzer"
+
+#: header.php
+msgid "Show all Questions"
+msgstr "Zeige alle Fragen"
+
+#: header.php
+msgid "all"
+msgstr "Alle"
+
+#: header.php
+msgid "Show only unanswered questions"
+msgstr "Zeige alle unbeantworteten Frage"
+
+#: header.php
+msgid "unanswered"
+msgstr "unbeantwortet"
+
+#: header.php
+msgid "Ask your Question"
+msgstr "Stelle Deine Frage"
+
+#: header.php
+msgid "What do you want to know?"
+msgstr "Was möchtest Du wissen?"
+
+#: page_answer_edit.php page_question_edit.php
+msgid "Zusammenfassung der Überarbeitung:"
+msgstr ""
+
+#: page_answer_edit.php page_question_edit.php
+msgid ""
+"Bitte gebe eine kurze Beschreibung deiner Überarbeitung ein (z.B. "
+"Rechtschreibung, Tippfehler korrigiert, Grammatik, Stil verbessert) "
+"(Freiwillige Angabe)"
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid ""
+"Kreuze an wenn du deinen Namen bei einer Frage nicht anzeigen lassen möchtest"
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid "Frage anonym"
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid ""
+"Wenn Du community-wiki auswählst, werden auf die Frage und Antworten keine "
+"Bewertungspunkte vergeben, der Name des Autors wird nicht angezeigt."
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid ""
+"Community Wiki (Karma wird nicht gezählt, und andere können den Beitrag "
+"editieren)"
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid "Tipps"
+msgstr ""
+
+#: page_answer_edit.php page_ask.php page_question_edit.php
+msgid "Markdown Tricks"
+msgstr "Editor Tricks"
+
+#: page_answer_edit.php page_question_edit.php
+msgid "Schreibe hier deine Frage noch ein wenig ausführlicher..."
+msgstr ""
+
+#: page_ask.php
+msgid "Wie lautet Deine Frage?"
+msgstr ""
+
+#: page_ask.php page_question_edit.php
+msgid "Bitte gebe einen aussagekräftigen Titel für die Frage ein."
+msgstr ""
+
+#: page_ask.php page_question_edit.php
+msgid "tags:"
+msgstr "Tags:"
+
+#: page_ask.php
+msgid ""
+"Tags are short keywords, with no spaces within. Up to 5 tags can be used."
+msgstr "Tags sind kurze Schlüsselwörter. Du kannst bis zu 5 Tags vergeben."
+
+#: page_ask.php
+msgid "Write your question a little more specific..."
+msgstr "Bitte schreibe Deine Frage nun ein bisschen ausführlicher..."
+
+#: page_badgeprofile.php
+msgid "{0} Benutzer haben dieses Abzeichen"
+msgstr ""
+
+#: page_badgeprofile.php
+msgid "{n} Benutzer haben dieses Abzeichen"
+msgid_plural "{n} Benutzer haben dieses Abzeichen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: page_badges.php page_userbadges.php
+msgid "Community-Abzeichen"
+msgstr ""
+
+#: page_login.php
+msgid "Bitte klicke auf ein passendes Anbieter-Icon um dich einzuloggen"
+msgstr ""
+
+#: page_login.php
+msgid ""
+"Wähle deinen gewünschten Anbieter aus, um dich mit dessen sicheren Login-"
+"Verfahren einzuloggen. Mit diesen externen Diensten hast du deine "
+"Loginverfahren immer zentral unter Kontrolle."
+msgstr ""
+
+#: page_login.php
+msgid "oder gebe dein Askbot user name and Passwort ein, dann logge dich ein"
+msgstr ""
+
+#: page_login.php
+msgid "Benutzername oder E-Mail:"
+msgstr ""
+
+#: page_login.php
+msgid "Benutzername oder E-Mail-Adresse"
+msgstr ""
+
+#: page_login.php
+msgid "Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Ihr Passwort"
+msgstr ""
+
+#: page_login.php
+msgid "Anmelden"
+msgstr ""
+
+#: page_login.php
+msgid "Erstelle einen passwortgeschützten Account"
+msgstr ""
+
+#: page_login.php
+msgid "Altes Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Neues Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Wiederholung:"
+msgstr ""
+
+#: page_login.php
+msgid "Passwort ändern"
+msgstr ""
+
+#: page_question.php page_questions.php
+msgid "Diese Nachricht ist geschlossen"
+msgstr ""
+
+#: page_question.php
+msgid "Fragen mit Tag '{0}' anzeigen"
+msgstr ""
+
+#: page_question.php
+msgid "bearbeiten"
+msgstr ""
+
+#: page_question.php
+msgid "schließen"
+msgstr ""
+
+#: page_question.php
+msgid "Kommentare"
+msgstr ""
+
+#: page_question.php
+msgid "kommentiert am {0} Uhr "
+msgstr ""
+
+#: page_question.php
+msgid "Deine Antwort"
+msgstr ""
+
+#: page_question.php
+msgid ""
+"Achtung! Du bist nicht angemeldet! Wenn Du diese Antwort veröffentlichst, "
+"wird sie zuerst von einem Moderator geprüft und kann nicht mehr von Dir "
+"bearbeitet werden."
+msgstr ""
+
+#: page_question.php
+msgid "Verfasse die erste Antwort auf diese Frage!"
+msgstr ""
+
+#: page_question.php
+msgid "Kennst Du die Antwort?"
+msgstr ""
+
+#: page_question_edit.php
+msgid ""
+"Tags sind kurze Schlüsselwörter, die Deine Frage beschreiben. Du kannst bis "
+"zu 5 Begriffe jeweils mit Komma nennen."
+msgstr ""
+
+#: page_questions.php
+msgid "Subscribe to the Questions-RSS-Feed"
+msgstr "Folge dem Fragen-RSS-Feed"
+
+#: page_questions.php
+msgid "RSS"
+msgstr "RSS"
+
+#: page_questions.php page_tags.php page_users.php
+msgid "Sort by »"
+msgstr "Sortiere nach »"
+
+#: page_questions.php
+msgid "Date"
+msgstr "Datum"
+
+#: page_questions.php
+msgid "Aktivity"
+msgstr "Aktivität"
+
+#: page_questions.php
+msgid "Answers"
+msgstr "Antworten"
+
+#: page_questions.php
+msgid "Votes"
+msgstr "Votes"
+
+#: page_questions.php
+msgid "{n} Questions"
+msgid_plural "{n} Questions"
+msgstr[0] "keine Fragen"
+msgstr[1] "1 Frage"
+msgstr[2] "{n} Fragen"
+
+#: page_questions.php
+msgid "views"
+msgstr "Views"
+
+#: page_questions.php
+msgid "answers"
+msgstr "Antworten"
+
+#: page_questions.php
+msgid "votes"
+msgstr "Votes"
+
+#: page_questions.php
+msgid "show questions with the tag '{0}'"
+msgstr "Fragen mit dem Tag '{0}' zeigen"
+
+#: page_questions.php
+msgid "Nothing found?"
+msgstr "Nicht gefunden wonach Du gesuchst hast?"
+
+#: page_questions.php
+msgid "Please tell us your question"
+msgstr "Bitte stelle Deine Frage!"
+
+#: page_questions.php
+msgid "Search: '{0}'"
+msgstr "Suche: '{0}'"
+
+#: page_questions.php
+msgid "Fragen"
+msgstr ""
+
+#: page_questions.php
+msgid "j. M Y H:i:s T"
+msgstr "d.m.Y H:i:s T"
+
+#: page_tags.php
+msgid "sort tags by their name"
+msgstr "sortiere Tags nach ihrem Namen"
+
+#: page_tags.php
+msgid "Name"
+msgstr ""
+
+#: page_tags.php
+msgid "sort tags by their popularity"
+msgstr "sortiere Tags nach ihrer Beliebtheit"
+
+#: page_tags.php
+msgid "Popularity"
+msgstr "Beliebtheit"
+
+#: page_tags.php
+msgid "{0} Tags"
+msgstr "{0} Tags"
+
+#: page_tags.php
+msgid "{0} Tags auf {1}"
+msgstr ""
+
+#: page_userbadges.php
+msgid "{0}'s Auszeichnungen"
+msgstr ""
+
+#: page_userinbox.php
+msgid "Dein Postfach"
+msgstr ""
+
+#: page_userkarma.php
+msgid "{0}'s Karma Übersicht"
+msgstr ""
+
+#: page_userprofile.php page_userprofilerights.php
+msgid "{0}'s Profil-Übersicht"
+msgstr ""
+
+#: page_userprofile.php page_userprofilerights.php
+msgid "{0} Alter"
+msgstr ""
+
+#: page_userprofile.php
+msgid "Mitglied"
+msgstr ""
+
+#: page_userprofile.php
+msgid "{0}'s Profil"
+msgstr ""
+
+#: page_userprofileedit.php
+msgid "{0}'s Profil bearbeiten"
+msgstr ""
+
+#: page_userprofileedit.php
+msgid "{0}'s Karmaprofil"
+msgstr ""
+
+#: page_users.php
+msgid "{n} Users"
+msgid_plural "{n} Users"
+msgstr[0] "keine Mitwirkenden"
+msgstr[1] "1 Mitwirkender"
+msgstr[2] "{n} Mitwirkende"
+
+#: page_users.php widget_contributors.php
+msgid "{0}'s Gravatar Image"
+msgstr "{0}'s Gravatar-Bild"
+
+#: page_users.php
+msgid "Expert for this Subject"
+msgstr "Experte in diesem Thema"
+
+#: page_users.php
+msgid "User karma of {0}"
+msgstr "{0}'s Karma"
+
+#: page_users.php
+msgid "gold medals of {0}"
+msgstr "Gold Medaillen von {0}"
+
+#: page_users.php
+msgid "silver medals of {0}"
+msgstr "Silber Medaillen von {0}"
+
+#: page_users.php
+msgid "bronce medals of {0}"
+msgstr "Bronze Medaille von {0}"
+
+#: page_users.php
+msgid "{n} Users of {1}"
+msgid_plural "{n} Users of {1}"
+msgstr[0] "keine Mitglieder auf {1}"
+msgstr[1] "1 Mitglied auf {1}"
+msgstr[2] "{n} Mitglieder auf {1}"
+
+#: widget_contributors.php
+msgid "Contributors"
+msgstr "Mitwirkende"
+
+#: widget_question_similar.php
+msgid "similar questions"
+msgstr "Verwandte / ähnliche Fragen"
+
+#: widget_question_statistics.php
+msgid "Question Statistics"
+msgstr "Fragen-Statistiken"
+
+#: widget_question_statistics.php
+msgid "Asked:"
+msgstr "Gefragt am:"
+
+#: widget_question_statistics.php
+msgid "{ts}"
+msgstr "{ts} Uhr"
+
+#: widget_question_statistics.php
+msgid "Number of Views:"
+msgstr "Anzahl Views:"
+
+#: widget_question_statistics.php
+msgid "Last edit:"
+msgstr "Letzte Bearbeitung:"
+
+#: widget_question_statistics.php
+msgid "Last activity:"
+msgstr "Letzte Aktivität:"
+
+#: widget_question_statistics.php
+msgid "Last contributor:"
+msgstr "Letzter Mitarbeiter:"
+
+#: widget_question_statistics.php
+msgid "m/d/Y H:i:s"
+msgstr "d.m.Y H:i:s"
+
+#: Question.php
+msgid "{0} seconds ago"
+msgstr "vor {0} Sekunden"
+
+#: Question.php
+msgid "{0} minutes ago"
+msgstr "vor {0} Minuten"
+
+#: Question.php
+msgid "{0} hours ago"
+msgstr "vor {0} Stunden"
+
+#: Question.php
+msgid "{0} days ago"
+msgstr "vor {0} Tagen"
+
+#: Question.php
+msgid "on {0}"
+msgstr "am {0}"
+
+#: Question.php
+msgid "M j 'y"
+msgstr "d.m.Y"
+
+#: Country.php
+msgid "Germany"
+msgstr "Deutschland"
+
+#: Country.php
+msgid "France"
+msgstr "Frankreich"
+
+#: Country.php
+msgid "U.S.A."
+msgstr "USA"
+
+#: Country.php
+msgid "German (Germany)"
+msgstr "deutsch (Deutschland)"
+
+#: Country.php
+msgid "German (Austria)"
+msgstr "deutsch (Österreich)"
+
+#: Country.php
+msgid "english (U.S.A.)"
+msgstr "englisch (USA)"

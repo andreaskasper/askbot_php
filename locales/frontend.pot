@@ -1,0 +1,763 @@
+#: Country.php
+msgid ""
+msgstr "Project-Id-Version: Askbot 0.1.20121108-betaReport-Msgid-Bugs-To: askbot.sourceforge.netPO-Revision-Date: 2012-11-08 15:21+0100Last-Translator: Language-Team: Language:MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitPOT-Creation-Date: X-Generator: Poedit 1.5.4X-Poedit-SourceCharset: UTF-8"
+
+#: box_paginator.php
+msgid "Previous Page"
+msgstr ""
+
+#: box_paginator.php
+msgid "« Previous"
+msgstr ""
+
+#: box_paginator.php
+msgid "go to {n}th page"
+msgid_plural "go to {n}th page"
+msgstr[0] ""
+msgstr[1] ""
+
+#: box_paginator.php
+msgid "Next Page"
+msgstr ""
+
+#: box_paginator.php
+msgid "Next »"
+msgstr ""
+
+#: box_tags_navi.php
+msgid "Infos"
+msgstr ""
+
+#: box_tags_navi.php
+#: page_questions.php
+msgid "Fragen"
+msgstr ""
+
+#: footer.php
+msgid "Copyright {pagename}, {year}."
+msgstr ""
+
+#: footer.php
+msgid "About us"
+msgstr ""
+
+#: footer.php
+msgid "Frequently asked questions"
+msgstr ""
+
+#: footer.php
+msgid "Help"
+msgstr ""
+
+#: footer.php
+msgid "Privacy"
+msgstr ""
+
+#: footer.php
+msgid "Feedback"
+msgstr ""
+
+#: footer.php
+msgid "Powered by Askbot for php version {0}"
+msgstr ""
+
+#: footer.php
+msgid "inspired by Askbot"
+msgstr ""
+
+#: header.php
+#: page_question.php
+msgid "close"
+msgstr ""
+
+#: header.php
+msgid "back to home"
+msgstr ""
+
+#: header.php
+msgid "You have {n} new messages"
+msgid_plural "You have {n} new messages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php
+msgid "Karma: {0}"
+msgstr ""
+
+#: header.php
+msgid "Badges"
+msgstr ""
+
+#: header.php
+msgid "logout"
+msgstr ""
+
+#: header.php
+msgid "Hello, please register"
+msgstr ""
+
+#: header.php
+msgid "help"
+msgstr ""
+
+#: header.php
+msgid "Settings"
+msgstr ""
+
+#: header.php
+#: widget_tags.php
+msgid "Tags"
+msgstr ""
+
+#: header.php
+msgid "Users"
+msgstr ""
+
+#: header.php
+msgid "Show all Questions"
+msgstr ""
+
+#: header.php
+msgid "all"
+msgstr ""
+
+#: header.php
+msgid "Show only unanswered questions"
+msgstr ""
+
+#: header.php
+msgid "unanswered"
+msgstr ""
+
+#: header.php
+msgid "Ask your Question"
+msgstr ""
+
+#: header.php
+msgid "What do you want to know?"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_question_edit.php
+msgid "Zusammenfassung der Überarbeitung:"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_question_edit.php
+msgid "Bitte gebe eine kurze Beschreibung deiner Überarbeitung ein (z.B. Rechtschreibung, Tippfehler korrigiert, Grammatik, Stil verbessert) (Freiwillige Angabe)"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Kreuze an wenn du deinen Namen bei einer Frage nicht anzeigen lassen möchtest"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Frage anonym"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Wenn Du community-wiki auswählst, werden auf die Frage und Antworten keine Bewertungspunkte vergeben, der Name des Autors wird nicht angezeigt."
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Community Wiki (Karma wird nicht gezählt, und andere können den Beitrag editieren)"
+msgstr ""
+
+#: page_answer_edit.php
+msgid "save your answer"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Tipps"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_ask.php
+#: page_question_edit.php
+msgid "Markdown Tricks"
+msgstr ""
+
+#: page_answer_edit.php
+#: page_question_edit.php
+msgid "Schreibe hier deine Frage noch ein wenig ausführlicher..."
+msgstr ""
+
+#: page_ask.php
+msgid "Wie lautet Deine Frage?"
+msgstr ""
+
+#: page_ask.php
+#: page_question_edit.php
+msgid "Bitte gebe einen aussagekräftigen Titel für die Frage ein."
+msgstr ""
+
+#: page_ask.php
+#: page_question_edit.php
+msgid "tags:"
+msgstr ""
+
+#: page_ask.php
+msgid "Tags are short keywords, with no spaces within. Up to 5 tags can be used."
+msgstr ""
+
+#: page_ask.php
+msgid "Stelle eine Frage die diese Community interessieren könnte"
+msgstr ""
+
+#: page_ask.php
+msgid "Hinterlasse genug Details"
+msgstr ""
+
+#: page_ask.php
+msgid "Sei klar und deutlich."
+msgstr ""
+
+#: page_ask.php
+msgid "ask your question"
+msgstr ""
+
+#: page_ask.php
+msgid "Write your question a little more specific..."
+msgstr ""
+
+#: page_badgeprofile.php
+msgid "{0} Benutzer haben dieses Abzeichen"
+msgstr ""
+
+#: page_badgeprofile.php
+msgid "{n} Benutzer haben dieses Abzeichen"
+msgid_plural "{n} Benutzer haben dieses Abzeichen"
+msgstr[0] ""
+msgstr[1] ""
+
+#: page_badges.php
+#: page_userbadges.php
+msgid "Community-Abzeichen"
+msgstr ""
+
+#: page_login.php
+msgid "Bitte klicke auf ein passendes Anbieter-Icon um dich einzuloggen"
+msgstr ""
+
+#: page_login.php
+msgid "Wähle deinen gewünschten Anbieter aus, um dich mit dessen sicheren Login-Verfahren einzuloggen. Mit diesen externen Diensten hast du deine Loginverfahren immer zentral unter Kontrolle."
+msgstr ""
+
+#: page_login.php
+msgid "oder gebe dein Askbot user name and Passwort ein, dann logge dich ein"
+msgstr ""
+
+#: page_login.php
+msgid "Benutzername oder E-Mail:"
+msgstr ""
+
+#: page_login.php
+msgid "Benutzername oder E-Mail-Adresse"
+msgstr ""
+
+#: page_login.php
+msgid "Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Ihr Passwort"
+msgstr ""
+
+#: page_login.php
+msgid "Anmelden"
+msgstr ""
+
+#: page_login.php
+msgid "Erstelle einen passwortgeschützten Account"
+msgstr ""
+
+#: page_login.php
+msgid "Altes Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Neues Passwort:"
+msgstr ""
+
+#: page_login.php
+msgid "Wiederholung:"
+msgstr ""
+
+#: page_login.php
+msgid "Passwort ändern"
+msgstr ""
+
+#: page_login.php
+msgid "sigin to {pagename}"
+msgstr ""
+
+#: page_question.php
+msgid "Current votes for this question"
+msgstr ""
+
+#: page_question.php
+msgid "Share this question in Twitter"
+msgstr ""
+
+#: page_question.php
+msgid "Share this question on Facebook"
+msgstr ""
+
+#: page_question.php
+msgid "Diese Nachricht ist geschlossen"
+msgstr ""
+
+#: page_question.php
+msgid "for this question you can get some bounty"
+msgstr ""
+
+#: page_question.php
+msgid "for the best answer you get some bitcoins additional"
+msgstr ""
+
+#: page_question.php
+msgid "for the best answer you get some Euros additional"
+msgstr ""
+
+#: page_question.php
+msgid "for the best answer you get some reputation additional"
+msgstr ""
+
+#: page_question.php
+msgid "Fragen mit Tag '{0}' anzeigen"
+msgstr ""
+
+#: page_question.php
+msgid "set some bounty for someone who knows the right answer"
+msgstr ""
+
+#: page_question.php
+msgid "set bounty"
+msgstr ""
+
+#: page_question.php
+#: page_tags_info.php
+msgid "edit"
+msgstr ""
+
+#: page_question.php
+msgid "reopen"
+msgstr ""
+
+#: page_question.php
+msgid "Kommentare"
+msgstr ""
+
+#: page_question.php
+msgid "kommentiert am {0} Uhr "
+msgstr ""
+
+#: page_question.php
+msgid "bearbeiten"
+msgstr ""
+
+#: page_question.php
+msgid "Deine Antwort"
+msgstr ""
+
+#: page_question.php
+msgid "Achtung! Du bist nicht angemeldet! Wenn Du diese Antwort veröffentlichst, wird sie zuerst von einem Moderator geprüft und kann nicht mehr von Dir bearbeitet werden."
+msgstr ""
+
+#: page_question.php
+msgid "Verfasse die erste Antwort auf diese Frage!"
+msgstr ""
+
+#: page_question.php
+msgid "submit your answer"
+msgstr ""
+
+#: page_question.php
+msgid "Kennst Du die Antwort?"
+msgstr ""
+
+#: page_question_edit.php
+msgid "Tags sind kurze Schlüsselwörter, die Deine Frage beschreiben. Du kannst bis zu 5 Begriffe jeweils mit Komma nennen."
+msgstr ""
+
+#: page_questions.php
+msgid "Subscribe to the Questions-RSS-Feed"
+msgstr ""
+
+#: page_questions.php
+msgid "RSS"
+msgstr ""
+
+#: page_questions.php
+#: page_tags.php
+#: page_users.php
+msgid "Sort by »"
+msgstr ""
+
+#: page_questions.php
+msgid "Date"
+msgstr ""
+
+#: page_questions.php
+msgid "Aktivity"
+msgstr ""
+
+#: page_questions.php
+msgid "Answers"
+msgstr ""
+
+#: page_questions.php
+msgid "Votes"
+msgstr ""
+
+#: page_questions.php
+msgid "{n} Questions"
+msgid_plural "{n} Questions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: page_questions.php
+msgid "views"
+msgstr ""
+
+#: page_questions.php
+msgid "answers"
+msgstr ""
+
+#: page_questions.php
+msgid "votes"
+msgstr ""
+
+#: page_questions.php
+msgid "This question is closed"
+msgstr ""
+
+#: page_questions.php
+msgid "This question has a bounty"
+msgstr ""
+
+#: page_questions.php
+#: page_tags.php
+msgid "show questions with the tag '{0}'"
+msgstr ""
+
+#: page_questions.php
+msgid "Nothing found?"
+msgstr ""
+
+#: page_questions.php
+msgid "Please tell us your question"
+msgstr ""
+
+#: page_questions.php
+msgid "Search: '{0}'"
+msgstr ""
+
+#: page_questions.php
+msgid "j. M Y H:i:s T"
+msgstr ""
+
+#: page_tags.php
+msgid "{n} Tags"
+msgid_plural "{n} Tags"
+msgstr[0] ""
+msgstr[1] ""
+
+#: page_tags.php
+msgid "{0} Tags auf {1}"
+msgstr ""
+
+#: page_tags_info.php
+msgid "Infos for Tag '{0}'"
+msgstr ""
+
+#: page_tags_info.php
+msgid "Dieser Tag hat aktuell noch keine Erkl�rung. Ab 2500 Karma Punkten kannst Du diesen Artikel erstellen und so anderen Usern helfen oder einen kurzen Einblick in das Thema bieten."
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_infoedit.php
+#: page_tags_synonyms.php
+msgid "questions tagged"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_infoedit.php
+msgid "Synonyms"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_infoedit.php
+#: page_tags_synonyms.php
+msgid "Stats"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+msgid "created:"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+msgid "edited:"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+msgid "views:"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+msgid "Top Answerers"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+#: widget_contributors.php
+msgid "{0}'s Gravatar Image"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+msgid "Expert for this Subject"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+msgid "User karma of {0}"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+msgid "gold medals of {0}"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+msgid "silver medals of {0}"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_synonyms.php
+#: page_users.php
+msgid "bronce medals of {0}"
+msgstr ""
+
+#: page_tags_info.php
+#: page_tags_infoedit.php
+#: page_tags_synonyms.php
+msgid "Related Tags"
+msgstr ""
+
+#: page_tags_infoedit.php
+msgid "edit infos for Tag '{0}'"
+msgstr ""
+
+#: page_tags_infoedit.php
+msgid "short description"
+msgstr ""
+
+#: page_tags_infoedit.php
+msgid "long description"
+msgstr ""
+
+#: page_tags_infoedit.php
+msgid "save"
+msgstr ""
+
+#: page_tags_infoedit.php
+msgid "Write down the explaination of the tag"
+msgstr ""
+
+#: page_tags_synonyms.php
+msgid "Synonyms for Tag '{0}'"
+msgstr ""
+
+#: page_userbadges.php
+msgid "{0}'s Auszeichnungen"
+msgstr ""
+
+#: page_userinbox.php
+msgid "Dein Postfach"
+msgstr ""
+
+#: page_userkarma.php
+msgid "{0}'s Karma Übersicht"
+msgstr ""
+
+#: page_userprofile.php
+#: page_userprofilerights.php
+msgid "{0}'s Profil-Übersicht"
+msgstr ""
+
+#: page_userprofile.php
+#: page_userprofilerights.php
+msgid "{0} Alter"
+msgstr ""
+
+#: page_userprofile.php
+msgid "Mitglied"
+msgstr ""
+
+#: page_userprofile.php
+msgid "{0}'s Profil"
+msgstr ""
+
+#: page_userprofileedit.php
+msgid "{0}'s Profil bearbeiten"
+msgstr ""
+
+#: page_userprofileedit.php
+msgid "{0}'s Karmaprofil"
+msgstr ""
+
+#: page_users.php
+msgid "{n} Users"
+msgid_plural "{n} Users"
+msgstr[0] ""
+msgstr[1] ""
+
+#: page_users.php
+msgid "{n} Users of {1}"
+msgid_plural "{n} Users of {1}"
+msgstr[0] ""
+msgstr[1] ""
+
+#: widget_contributors.php
+msgid "Contributors"
+msgstr ""
+
+#: widget_google_adsense_200x200.php
+msgid "Werbeblocker :-("
+msgstr ""
+
+#: widget_google_adsense_200x200.php
+msgid "Wenn du diese Seite nützlich findest und einen Teil zurückgeben möchtest, dann schalte bitte Deinen Werbeblocker ab oder überlege ob Du was spenden möchtest. Danke!"
+msgstr ""
+
+#: widget_question_similar.php
+msgid "similar questions"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Question Statistics"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Asked:"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "{ts}"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Number of Views:"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Last edit:"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Last activity:"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "Last contributor:"
+msgstr ""
+
+#: widget_question_statistics.php
+msgid "m/d/Y H:i:s"
+msgstr ""
+
+#: page_check.php
+#: page_plugins.php
+msgid "Administration Upgrade Datenbankvergleich"
+msgstr ""
+
+#: page_check.php
+msgid "Verzeichnisprüfung"
+msgstr ""
+
+#: page_check.php
+#: page_plugins.php
+msgid "Datenbankprüfung"
+msgstr ""
+
+#: page_check.php
+msgid "create table"
+msgstr ""
+
+#: page_settings.php
+msgid "system settings"
+msgstr ""
+
+#: class.i18n.php
+msgid "%01.2f\"
+msgstr ""
+
+#: Question.php
+msgid "{0} seconds ago"
+msgstr ""
+
+#: Question.php
+msgid "{0} minutes ago"
+msgstr ""
+
+#: Question.php
+msgid "{0} hours ago"
+msgstr ""
+
+#: Question.php
+msgid "{0} days ago"
+msgstr ""
+
+#: Question.php
+msgid "on {0}"
+msgstr ""
+
+#: Question.php
+msgid "M j 'y"
+msgstr ""
+
+#: Country.php
+msgid "Germany"
+msgstr ""
+
+#: Country.php
+msgid "France"
+msgstr ""
+
+#: Country.php
+msgid "U.S.A."
+msgstr ""
+
+#: Country.php
+msgid "German (Germany)"
+msgstr ""
+
+#: Country.php
+msgid "German (Austria)"
+msgstr ""
+
+#: Country.php
+msgid "english (U.S.A.)"
+msgstr ""
+
