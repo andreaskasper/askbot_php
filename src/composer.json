@@ -1,7 +1,12 @@
 {
     "name": "andreaskasper/askbot_php",
-    "description": "Q/A Board für php",
-    "license": "FastFoodLicense <https://github.com/DJAssi/license/blob/master/README.md>",
+    "description": "An easy to use, self-hosted Q/A board written in PHP",
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://andreaskasper.github.io/askbot_php/",
+    "support": {
+        "issues": "https://github.com/andreaskasper/askbot_php/issues",
+        "source": "https://github.com/andreaskasper/askbot_php"
+    },
     "authors": [
         {
             "name": "Andreas Kasper",

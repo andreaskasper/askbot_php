@@ -1,14 +1,13 @@
 askbot for php
 ==============
 
-A easy to user Q/A-Board for php
+An easy to use Q/A board for PHP. This directory is the deployable
+application — point your web server's document root here.
 
-
-### Installation
-You can easily install it via composer or via github
-git clone --depth 1 https://github.com/andreaskasper/askbot_php.git
+See the [README in the repository root](../README.md) and the
+[project site](https://andreaskasper.github.io/askbot_php/) for
+installation, documentation and deployment.
 
 ### License
-FreeFoodLicense
-https://github.com/andreaskasper/license/blob/master/README.md
 
+[AGPL-3.0-or-later](../LICENSE)
