@@ -1,0 +1,7 @@
+# askbot_php background jobs. Only needed when you do NOT run the "cron" container.
+# m h dom mon dow command
+*/5  * * * * php /var/www/html/app/app.php bot -t notifications  >> /var/www/logs/bots.log 2>&1
+*/10 * * * * php /var/www/html/app/app.php bot -t badges         >> /var/www/logs/bots.log 2>&1
+17   3 * * * php /var/www/html/app/app.php bot -t cleanup        >> /var/www/logs/bots.log 2>&1
+23   4 * * * php /var/www/html/app/app.php bot -t maintenance    >> /var/www/logs/bots.log 2>&1
+0    7 * * * php /var/www/html/app/app.php bot -t digest         >> /var/www/logs/bots.log 2>&1

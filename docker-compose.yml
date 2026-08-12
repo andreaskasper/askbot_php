@@ -1,0 +1,91 @@
+services:
+
+  web:
+    build:
+      context: ./Dockerfiles/web/
+    container_name: askbot_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      - STAGE=${STAGE:-development}
+      - MYSQL_HOST=${MYSQL_HOST:-db}
+      - MYSQL_PORT=${MYSQL_PORT:-3306}
+      - MYSQL_USER=${MYSQL_USER:-askbot}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-askbot}
+      - MYSQL_DB=${MYSQL_DB:-askbot}
+      - BASE_URL=${BASE_URL:-http://localhost:8080}
+      - APP_SECRET=${APP_SECRET:-change-me}
+      - MAIL_HOST=${MAIL_HOST:-mail}
+      - MAIL_PORT=${MAIL_PORT:-1025}
+      - MAIL_FROM=${MAIL_FROM:-noreply@localhost}
+      - MAIL_FROM_NAME=${MAIL_FROM_NAME:-Askbot}
+      - OAUTH_GOOGLE_ID=${OAUTH_GOOGLE_ID:-}
+      - OAUTH_GOOGLE_SECRET=${OAUTH_GOOGLE_SECRET:-}
+      - OAUTH_GITHUB_ID=${OAUTH_GITHUB_ID:-}
+      - OAUTH_GITHUB_SECRET=${OAUTH_GITHUB_SECRET:-}
+      - OAUTH_DISCORD_ID=${OAUTH_DISCORD_ID:-}
+      - OAUTH_DISCORD_SECRET=${OAUTH_DISCORD_SECRET:-}
+      - HCAPTCHA_SITEKEY=${HCAPTCHA_SITEKEY:-}
+      - HCAPTCHA_SECRET=${HCAPTCHA_SECRET:-}
+    volumes:
+      - ./:/var/www/:rw
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:11.4
+    container_name: askbot_db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
+      - MARIADB_DATABASE=${MYSQL_DB:-askbot}
+      - MARIADB_USER=${MYSQL_USER:-askbot}
+      - MARIADB_PASSWORD=${MYSQL_PASSWORD:-askbot}
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb-ft-min-token-size=2
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/00-schema.sql:ro
+      - ./database.seed.sql:/docker-entrypoint-initdb.d/01-seed.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  mail:
+    image: axllent/mailpit:latest
+    container_name: askbot_mail
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+
+  cron:
+    build:
+      context: ./Dockerfiles/web/
+    container_name: askbot_cron
+    restart: unless-stopped
+    command: php /var/www/html/app/app.php cron --loop --sleep=60
+    environment:
+      - STAGE=${STAGE:-development}
+      - MYSQL_HOST=${MYSQL_HOST:-db}
+      - MYSQL_PORT=${MYSQL_PORT:-3306}
+      - MYSQL_USER=${MYSQL_USER:-askbot}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-askbot}
+      - MYSQL_DB=${MYSQL_DB:-askbot}
+      - BASE_URL=${BASE_URL:-http://localhost:8080}
+      - APP_SECRET=${APP_SECRET:-change-me}
+      - MAIL_HOST=${MAIL_HOST:-mail}
+      - MAIL_PORT=${MAIL_PORT:-1025}
+      - MAIL_FROM=${MAIL_FROM:-noreply@localhost}
+    volumes:
+      - ./:/var/www/:rw
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db_data:

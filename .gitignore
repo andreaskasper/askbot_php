@@ -1,0 +1,14 @@
+/html/app/config.php
+/html/uploads/*
+!/html/uploads/.gitkeep
+/vendor/
+/node_modules/
+/logs/*.log
+/.env
+/.phpunit.result.cache
+/composer.phar
+*.swp
+.DS_Store
+.phpunit.cache/
+/html/sitemap.xml
+/logs/cache/

@@ -1,0 +1,99 @@
+/* askbot_php - house styles on top of Bootstrap 5.
+   Everything here is either a small utility or something Bootstrap has no
+   opinion about (vote arrows, tag chips, markdown output, diffs). */
+
+:root {
+  --ab-accepted: #198754;
+  --ab-vote-active: #0d6efd;
+  --ab-tag-bg: rgba(13, 110, 253, .08);
+  --ab-tag-fg: #0a58ca;
+}
+[data-bs-theme="dark"] {
+  --ab-tag-bg: rgba(110, 168, 254, .14);
+  --ab-tag-fg: #9ec5fe;
+}
+
+[v-cloak] { display: none !important; }
+
+body { font-size: .95rem; }
+
+/* --- question list ------------------------------------------------------ */
+.question-summary { border-bottom: 1px solid var(--bs-border-color); padding: 1rem 0; }
+.question-summary:last-child { border-bottom: 0; }
+.question-summary h2 { font-size: 1.05rem; margin-bottom: .35rem; line-height: 1.35; }
+.question-stats { min-width: 4.2rem; text-align: center; font-size: .78rem; color: var(--bs-secondary-color); }
+.question-stats .value { display: block; font-size: 1.05rem; font-weight: 600; color: var(--bs-body-color); }
+.question-stats.has-answers { color: var(--ab-accepted); }
+.question-stats.is-accepted {
+  background: var(--ab-accepted); color: #fff; border-radius: .375rem; padding: .15rem;
+}
+.question-stats.is-accepted .value { color: #fff; }
+
+/* --- tags --------------------------------------------------------------- */
+.tag-chip {
+  display: inline-block; padding: .15rem .45rem; margin: 0 .25rem .25rem 0;
+  background: var(--ab-tag-bg); color: var(--ab-tag-fg); border-radius: .25rem;
+  font-size: .78rem; text-decoration: none; white-space: nowrap;
+}
+.tag-chip:hover { background: var(--bs-primary); color: #fff; }
+.tag-count { font-size: .72rem; color: var(--bs-secondary-color); }
+
+/* --- votes -------------------------------------------------------------- */
+.vote-column { width: 3rem; }
+.vote-btn {
+  border: 0; background: none; color: var(--bs-secondary-color);
+  font-size: 1.35rem; line-height: 1; padding: .1rem .35rem; cursor: pointer;
+}
+.vote-btn:hover { color: var(--ab-vote-active); }
+.vote-btn.active { color: var(--ab-vote-active); }
+.vote-score { font-size: 1.25rem; font-weight: 600; }
+.accept-btn { border: 0; background: none; font-size: 1.6rem; color: var(--bs-border-color); cursor: pointer; }
+.accept-btn.accepted, .accept-btn:hover { color: var(--ab-accepted); }
+
+/* --- posts -------------------------------------------------------------- */
+.post-body { line-height: 1.65; overflow-wrap: break-word; }
+.post-body pre {
+  background: var(--bs-tertiary-bg); padding: .85rem 1rem; border-radius: .375rem;
+  overflow-x: auto; font-size: .86rem;
+}
+.post-body code { font-size: .86em; }
+.post-body :not(pre) > code {
+  background: var(--bs-tertiary-bg); padding: .12rem .35rem; border-radius: .25rem;
+}
+.post-body blockquote {
+  border-left: 3px solid var(--bs-border-color); padding-left: .9rem;
+  color: var(--bs-secondary-color); margin-bottom: 1rem;
+}
+.post-body img { max-width: 100%; height: auto; }
+.post-body table { width: auto; }
+.post-body h3 { font-size: 1.2rem; margin-top: 1.2rem; }
+.post-body h4 { font-size: 1.05rem; margin-top: 1rem; }
+
+.post-signature { background: var(--bs-tertiary-bg); border-radius: .375rem; padding: .5rem .65rem; font-size: .8rem; }
+.answer.is-accepted { border-left: 3px solid var(--ab-accepted); padding-left: 1rem; }
+
+/* --- comments ----------------------------------------------------------- */
+.comment { border-top: 1px solid var(--bs-border-color); padding: .4rem 0; font-size: .86rem; }
+.comment:first-child { border-top: 0; }
+
+/* --- editor ------------------------------------------------------------- */
+.md-editor textarea { font-family: var(--bs-font-monospace); font-size: .88rem; min-height: 14rem; }
+.md-toolbar .btn { --bs-btn-padding-y: .15rem; --bs-btn-padding-x: .45rem; --bs-btn-font-size: .8rem; }
+.md-preview { min-height: 6rem; background: var(--bs-tertiary-bg); border-radius: .375rem; padding: .75rem 1rem; }
+
+/* --- badges ------------------------------------------------------------- */
+.badge-dot::before { content: "\25CF"; margin-right: .25rem; }
+.badge-gold   { color: #c8a300; }
+.badge-silver { color: #9aa0a6; }
+.badge-bronze { color: #b56a3a; }
+
+/* --- revision diff ------------------------------------------------------ */
+.revision-diff { font-family: var(--bs-font-monospace); font-size: .82rem; white-space: pre-wrap; }
+.revision-diff .diff-add { background: rgba(25, 135, 84, .14); }
+.revision-diff .diff-del { background: rgba(220, 53, 69, .14); }
+
+/* --- misc --------------------------------------------------------------- */
+.karma-hint { font-size: .8rem; color: var(--bs-secondary-color); }
+.sticky-sidebar { position: sticky; top: 5rem; }
+.search-suggestions { z-index: 1050; max-height: 60vh; overflow-y: auto; }
+.empty-state { padding: 3rem 1rem; text-align: center; color: var(--bs-secondary-color); }

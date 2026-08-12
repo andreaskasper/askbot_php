@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: PHP syntax
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ["8.2", "8.3", "8.4"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mysqli, mbstring, gd, intl
+          coverage: none
+      - name: Lint every PHP file
+        run: |
+          find html tests migrate_legacy.php -name "*.php" -print0 \
+            | xargs -0 -n1 -P4 php -l > /dev/null
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    services:
+      mariadb:
+        image: mariadb:11.4
+        env:
+          MARIADB_ROOT_PASSWORD: root
+          MARIADB_DATABASE: askbot_test
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      MYSQL_HOST: 127.0.0.1
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DB: askbot_test
+      BASE_URL: http://localhost:8080
+      APP_SECRET: ci-secret-value-for-tests-only
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: mysqli, mbstring, gd, intl
+          coverage: none
+      - name: Import schema
+        run: |
+          mysql -h 127.0.0.1 -u root -proot askbot_test < database.sql
+          mysql -h 127.0.0.1 -u root -proot askbot_test < database.seed.sql
+      - uses: ramsey/composer-install@v3
+      - name: PHPUnit
+        run: vendor/bin/phpunit --colors=always
+      - name: Smoke test the running site
+        run: |
+          php -S 127.0.0.1:8080 -t html html/index.php &
+          sleep 2
+          bash scripts/smoke_test.sh http://127.0.0.1:8080

@@ -1,1 +1,0 @@
-<?phpclass Plugin_mailme404 extends PluginTemplate {	private static function init() {		}}

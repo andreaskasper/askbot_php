@@ -1,0 +1,40 @@
+{
+  "en": {
+    "All questions": "All questions",
+    "Unanswered questions": "Unanswered questions",
+    "Questions tagged [%s]": "Questions tagged [%s]",
+    "Questions about %s": "Questions about %s",
+    "%s questions": "%s questions",
+    "No questions here yet.": "No questions here yet.",
+    "Ask the first question": "Ask the first question",
+    "edit tag wiki": "edit tag wiki",
+    "Active": "Active",
+    "Newest": "Newest",
+    "Votes": "Votes",
+    "Answers": "Answers",
+    "Hot": "Hot",
+    "All": "All",
+    "Unanswered": "Unanswered",
+    "No accepted answer": "No accepted answer",
+    "Bounty": "Bounty"
+  },
+  "de": {
+    "All questions": "Alle Fragen",
+    "Unanswered questions": "Unbeantwortete Fragen",
+    "Questions tagged [%s]": "Fragen mit dem Tag [%s]",
+    "Questions about %s": "Fragen zu %s",
+    "%s questions": "%s Fragen",
+    "No questions here yet.": "Hier gibt es noch keine Fragen.",
+    "Ask the first question": "Stelle die erste Frage",
+    "edit tag wiki": "Tag-Wiki bearbeiten",
+    "Active": "Aktiv",
+    "Newest": "Neueste",
+    "Votes": "Stimmen",
+    "Answers": "Antworten",
+    "Hot": "Beliebt",
+    "All": "Alle",
+    "Unanswered": "Unbeantwortet",
+    "No accepted answer": "Ohne akzeptierte Antwort",
+    "Bounty": "Belohnung"
+  }
+}

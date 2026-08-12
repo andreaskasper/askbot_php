@@ -1,0 +1,303 @@
+openapi: 3.1.0
+info:
+  title: askbot_php API
+  version: "1.0"
+  description: |
+    JSON API of an askbot_php installation.
+
+    Every endpoint follows `/api/{namespace}.{method}.{format}`. Reads are open
+    to everyone, writes need either a session cookie plus CSRF token or a
+    personal API key sent as `Authorization: Bearer <key>`.
+  license:
+    name: FastFood Minimal License 1.0
+    url: https://github.com/andreaskasper/license
+servers:
+  - url: https://example.com/api
+    description: replace with your installation
+
+security:
+  - apiKey: []
+
+components:
+  securitySchemes:
+    apiKey:
+      type: http
+      scheme: bearer
+      description: Personal API key from the account settings.
+  schemas:
+    Envelope:
+      type: object
+      required: [result, err, runtime, timestamp]
+      properties:
+        result: { description: payload, nullable: true }
+        err:
+          type: object
+          properties:
+            id: { type: integer, description: 0 on success }
+            msg: { type: string }
+        runtime: { type: number, format: float }
+        timestamp:
+          type: object
+          properties:
+            unix: { type: integer }
+            iso8601: { type: string, format: date-time }
+    User:
+      type: object
+      properties:
+        id: { type: integer }
+        username: { type: string }
+        url: { type: string, format: uri }
+        avatar: { type: string, format: uri }
+        karma: { type: integer }
+        role: { type: string, enum: [user, moderator, admin] }
+        badges:
+          type: object
+          properties:
+            gold: { type: integer }
+            silver: { type: integer }
+            bronze: { type: integer }
+    Question:
+      type: object
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        url: { type: string, format: uri }
+        tags: { type: array, items: { type: string } }
+        score: { type: integer }
+        answer_count: { type: integer }
+        view_count: { type: integer }
+        is_closed: { type: boolean }
+        is_answered: { type: boolean }
+        created_at: { type: string }
+        last_activity_at: { type: string }
+        body_md: { type: string }
+        body_html: { type: string }
+        author: { $ref: "#/components/schemas/User" }
+    Answer:
+      type: object
+      properties:
+        id: { type: integer }
+        question_id: { type: integer }
+        url: { type: string, format: uri }
+        score: { type: integer }
+        is_accepted: { type: boolean }
+        body_md: { type: string }
+        body_html: { type: string }
+        author: { $ref: "#/components/schemas/User" }
+    Comment:
+      type: object
+      properties:
+        id: { type: integer }
+        body_md: { type: string }
+        body_html: { type: string }
+        score: { type: integer }
+        created_at: { type: string }
+        author: { $ref: "#/components/schemas/User" }
+    Pagination:
+      type: object
+      properties:
+        page: { type: integer }
+        pages: { type: integer }
+        total: { type: integer }
+        per_page: { type: integer }
+  responses:
+    Error:
+      description: the envelope carries the message in err.msg
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Envelope" }
+
+paths:
+  /question.list.json:
+    get:
+      summary: List questions
+      security: []
+      parameters:
+        - { in: query, name: tag, schema: { type: string } }
+        - { in: query, name: q, schema: { type: string } }
+        - { in: query, name: scope, schema: { type: string, enum: [unanswered, unsolved, accepted, bounty, closed] } }
+        - { in: query, name: sort, schema: { type: string, enum: [activity, newest, votes, answers, views, hot], default: activity } }
+        - { in: query, name: user, schema: { type: integer } }
+        - { in: query, name: page, schema: { type: integer, default: 1 } }
+        - { in: query, name: per_page, schema: { type: integer, default: 30, maximum: 100 } }
+      responses:
+        "200":
+          description: a page of questions
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      result:
+                        type: object
+                        properties:
+                          questions: { type: array, items: { $ref: "#/components/schemas/Question" } }
+                          pagination: { $ref: "#/components/schemas/Pagination" }
+        "429": { $ref: "#/components/responses/Error" }
+
+  /question.get.json:
+    get:
+      summary: One question with answers and comments
+      security: []
+      parameters:
+        - { in: query, name: id, required: true, schema: { type: integer } }
+        - { in: query, name: sort, schema: { type: string, enum: [votes, newest, oldest], default: votes } }
+      responses:
+        "200":
+          description: the question
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      result:
+                        allOf:
+                          - $ref: "#/components/schemas/Question"
+                          - type: object
+                            properties:
+                              answers: { type: array, items: { $ref: "#/components/schemas/Answer" } }
+                              comments: { type: array, items: { $ref: "#/components/schemas/Comment" } }
+        "404": { $ref: "#/components/responses/Error" }
+
+  /question.create.json:
+    post:
+      summary: Ask a question
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [title, body, tags]
+              properties:
+                title: { type: string, minLength: 15, maxLength: 300 }
+                body: { type: string, minLength: 20 }
+                tags: { type: array, items: { type: string }, maxItems: 5 }
+                csrf_token: { type: string, description: required for cookie based calls }
+      responses:
+        "200":
+          description: the new question
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Envelope" }
+        "400": { $ref: "#/components/responses/Error" }
+        "401": { $ref: "#/components/responses/Error" }
+
+  /question.accept.json:
+    post:
+      summary: Accept an answer (call again to unaccept)
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [id, answer_id]
+              properties:
+                id: { type: integer }
+                answer_id: { type: integer }
+                csrf_token: { type: string }
+      responses:
+        "200": { description: accepted state, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+        "403": { $ref: "#/components/responses/Error" }
+
+  /answer.create.json:
+    post:
+      summary: Post an answer
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [question_id, body]
+              properties:
+                question_id: { type: integer }
+                body: { type: string, minLength: 20 }
+                csrf_token: { type: string }
+      responses:
+        "200": { description: the new answer, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+        "400": { $ref: "#/components/responses/Error" }
+
+  /comment.create.json:
+    post:
+      summary: Comment on a question or answer
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [post_type, post_id, body]
+              properties:
+                post_type: { type: string, enum: [question, answer] }
+                post_id: { type: integer }
+                body: { type: string, maxLength: 1000 }
+                csrf_token: { type: string }
+      responses:
+        "200": { description: the new comment, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+
+  /vote.cast.json:
+    post:
+      summary: Vote on a post
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [post_type, post_id, value]
+              properties:
+                post_type: { type: string, enum: [question, answer, comment] }
+                post_id: { type: integer }
+                value: { type: integer, enum: [1, -1] }
+                csrf_token: { type: string }
+      responses:
+        "200": { description: new score and own vote, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+        "403": { $ref: "#/components/responses/Error" }
+
+  /search.query.json:
+    get:
+      summary: Search questions and answers
+      security: []
+      parameters:
+        - { in: query, name: q, required: true, schema: { type: string }, description: "supports tag:, user:, answers:0, is:accepted, score:" }
+        - { in: query, name: page, schema: { type: integer } }
+      responses:
+        "200": { description: results, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+
+  /tag.list.json:
+    get:
+      summary: List tags
+      security: []
+      parameters:
+        - { in: query, name: sort, schema: { type: string, enum: [popular, name, newest] } }
+        - { in: query, name: q, schema: { type: string } }
+        - { in: query, name: page, schema: { type: integer } }
+      responses:
+        "200": { description: tags, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+
+  /user.me.json:
+    get:
+      summary: The signed in account, its permissions and a CSRF token
+      responses:
+        "200": { description: account, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+        "401": { $ref: "#/components/responses/Error" }
+
+  /site.info.json:
+    get:
+      summary: Site metadata and karma thresholds
+      security: []
+      responses:
+        "200": { description: metadata, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
+
+  /site.stats.json:
+    get:
+      summary: Community counters
+      security: []
+      responses:
+        "200": { description: counters, content: { application/json: { schema: { $ref: "#/components/schemas/Envelope" } } } }
